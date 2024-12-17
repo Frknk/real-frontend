@@ -14,13 +14,12 @@ import {
     getSortedRowModel,
     useReactTable,
 } from "@tanstack/react-table"
-import { ArrowUpDown, EllipsisHorizontal, ChevronDown, Spinner, PencilSquare, Plus, Trash } from "@medusajs/icons"
+import { EllipsisHorizontal, ChevronDown, Spinner, PencilSquare, Trash } from "@medusajs/icons"
 import { Button, Input, Table, DropdownMenu, Container, Heading, usePrompt, toast } from "@medusajs/ui"
 import { ProductCreateModal } from "../create-product-modal/create-product-modal";
 import { ProductEditModal } from "../create-product-modal/edit-product-modal";
 import { useQuery } from '@tanstack/react-query';
 import { getProducts, deleteProduct } from "@/commons/products";
-import Link from "next/link";
 
 const handleDeleteProduct = async (id: number) => {
     const dialog = usePrompt();

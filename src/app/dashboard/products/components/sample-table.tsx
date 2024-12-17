@@ -1,7 +1,5 @@
 "use client"
-import { PencilSquare, Trash } from "@medusajs/icons"
-import { Button, Container, Heading, toast, usePrompt } from "@medusajs/ui"
-import Link from "next/link"
+import { Container, Heading } from "@medusajs/ui"
 import { Table } from "@medusajs/ui"
 import { useMemo, useState } from "react"
 import { DataTableDemo } from "./product-list-table"

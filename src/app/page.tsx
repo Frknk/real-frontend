@@ -1,6 +1,6 @@
 'use client'
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Heading, Input, Button, Hint, Alert, Text } from "@medusajs/ui";
+import { Heading, Input, Button, Alert, Text } from "@medusajs/ui";
 import AvatarBox from "@/components/logo-box/avatar-box";
 import { useForm } from "react-hook-form";
 import { Form } from "@/components/form";

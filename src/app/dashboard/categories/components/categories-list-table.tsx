@@ -1,5 +1,5 @@
 'use client'
-import { createCategory, getCategories } from '@/commons/categories';
+import { getCategories } from '@/commons/categories';
 import {
     ColumnDef,
     ColumnFiltersState,

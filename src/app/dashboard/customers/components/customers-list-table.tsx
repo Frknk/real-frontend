@@ -12,14 +12,12 @@ import {
     useReactTable,
 } from "@tanstack/react-table"
 
-import { getSales } from "@/commons/sales"
 
 import { Customer } from "@/commons/types"
 import { useQuery } from "@tanstack/react-query"
-import { Spinner, ArrowUpDown } from "@medusajs/icons"
+import { Spinner } from "@medusajs/icons"
 import { Container, Heading, Input, Table, Button } from "@medusajs/ui"
 import { useRouter } from "next/navigation"
-import { format } from 'date-fns'
 import { useState } from "react"
 import React from "react"
 import {CreateCustomerModal} from "./customer-create-modal"

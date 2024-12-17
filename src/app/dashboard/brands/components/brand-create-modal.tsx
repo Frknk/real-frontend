@@ -1,6 +1,6 @@
 "use client"
 
-import { Button, FocusModal, Heading, Input, Label, Text, Hint } from "@medusajs/ui"
+import { Button, FocusModal, Heading, Input, Text, Hint } from "@medusajs/ui"
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";

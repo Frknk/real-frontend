@@ -4,24 +4,19 @@ import { useRouter } from "next/navigation"
 import { Avatar, DropdownMenu, Text, clx, IconButton } from "@medusajs/ui"
 
 import {
-  BuildingStorefront,
   Buildings,
-  ChevronDownMini,
   CogSixTooth,
   CurrencyDollar,
   EllipsisHorizontal,
-  MagnifyingGlass,
-  MinusMini,
   OpenRectArrowOut,
   ReceiptPercent,
   ShoppingCart,
-  SquaresPlus,
   Tag,
   Users,
 } from "@medusajs/icons"
 
 import { SidebarLeft, TriangleRightMini, XMark } from "@medusajs/icons"
-import { PropsWithChildren, ReactNode } from "react"
+import { PropsWithChildren } from "react"
 import { useSidebar } from "./sidebar-provider"
 import { Skeleton
  } from "@/components/skeleton"

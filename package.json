@@ -17,6 +17,7 @@
     "@tanstack/react-table": "^8.20.5",
     "axios": "^1.7.9",
     "date-fns": "^4.1.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "motion": "^11.13.5",
     "next": "15.1.0",
     "react": "^19.0.0",
