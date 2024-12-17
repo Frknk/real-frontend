@@ -28,30 +28,11 @@ export default function Home() {
   })
 
   // if there is a token
-  //if (localStorage.getItem('token')) {
-  //  router.push('/dashboard');
-  ///}
-
-  /*useEffect(() => {
-    const verifyToken = async () => {
-      const token = localStorage.getItem('token');
-      console.log(token)
-      try {
-        const response = await fetch(`http://localhost:8000/auth/verify_token/${token}`);
-
-        if (!response.ok) {
-          throw new Error('Token verification failed');
-        }
-
-        router.push('/dashboard');
-      } catch (error) {
-        localStorage.removeItem('token');
-        router.push('/');
-      }
-    };
-
-    verifyToken();
-  })*/
+  if (localStorage.getItem('token')) {
+    useEffect(() => {
+      router.push('/dashboard/')
+  }, [router])
+  }
 
   const handleSubmit = form.handleSubmit(async (data) => {
     setLoading(true);

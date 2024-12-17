@@ -65,11 +65,11 @@ const MainSidebar = () => {
           <div className="flex flex-1 flex-col">
             <CoreRouteSection />
           </div>
-          <UtilitySection />
+          {/*<UtilitySection />*/}
         </div>
-        <div className="bg-ui-bg-subtle sticky bottom-0">
+        {/*<div className="bg-ui-bg-subtle sticky bottom-0">
           <UserSection />
-        </div>
+        </div>*/}
       </div>
     </aside>
   )
@@ -121,12 +121,16 @@ const useCoreRoutes = (): Omit<INavItem, "pathname">[] => {
       to: "/dashboard/products",
       items: [
         {
-          label: "collections.domain",
-          to: "/collections",
+          label: "Categories",
+          to: "/dashboard/categories",
         },
         {
-          label: "categories.domain",
-          to: "/categories",
+          label: "Brands",
+          to: "/dashboard/brands",
+        },
+        {
+          label: "Providers",
+          to: "/dashboard/providers",
         },
         // TODO: Enable when domin is introduced
         // {
@@ -149,7 +153,7 @@ const useCoreRoutes = (): Omit<INavItem, "pathname">[] => {
     {
       icon: <Users />,
       label: "Customers",
-      to: "/customers",
+      to: "/dashboard/customers",
       items: [
         {
           label: "customerGroups.domain",

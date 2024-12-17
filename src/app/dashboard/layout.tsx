@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import { Spinner } from '@medusajs/icons';
 import { SidebarProvider } from '@/components/sidebar/shell/sidebar-provider';
 import { Shell } from '@/components/sidebar/shell';
+import { Toaster } from '@medusajs/ui';
+import axios from '@/commons/api';
 
 export default function Dashboard({
   children,
@@ -17,20 +19,14 @@ export default function Dashboard({
   useEffect(() => {
     const verifyToken = async () => {
       const token = localStorage.getItem('token');
-        console.log(token)
       try {
-        const response = await fetch(`http://localhost:8000/auth/verify_token/${token}`);
-
-        if (!response.ok) {
-          throw new Error('Token verification failed');
-        }
-
+        const response = await axios.get(`auth/verify_token/${token}`);
         setIsAuthenticated(true);
       } catch (error) {
         localStorage.removeItem('token');
         router.push('/');
       }
-    };
+    }
 
     verifyToken();
   }, [router]);
@@ -44,6 +40,7 @@ export default function Dashboard({
   return (
     <div>
       <SidebarProvider>
+        <Toaster />
         <Shell>
           {children}
         </Shell>

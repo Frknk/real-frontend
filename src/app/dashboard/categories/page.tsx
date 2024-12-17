@@ -4,21 +4,21 @@ import {
     QueryClient,
 } from '@tanstack/react-query'
 
-import { getSales } from '@/commons/sales';
-import { SalesListTable } from './components/sales-list-table/sales-list-table';
+import { getCategories } from '@/commons/categories';
+import {CategoriesListTable} from './components/categories-list-table'
 
-export default function Sales() {
+export default function Customers() {
 
     const queryClient = new QueryClient()
 
     queryClient.prefetchQuery({
-        queryKey: ['sales'],
-        queryFn: getSales,
+        queryKey: ['categories'],
+        queryFn: getCategories,
     })
 
     return (
         <HydrationBoundary state={dehydrate(queryClient)}>
-            <SalesListTable />
+            <CategoriesListTable />
         </HydrationBoundary>
     );
 }
